@@ -10,13 +10,17 @@
 		"newArchEnabled": true,
 		"ios": {
 			"supportsTablet": true,
-			"bundleIdentifier": "com.anonymous.my_mind"
+			"bundleIdentifier": "com.anonymous.my_mind",
+			"infoPlist": {
+				"NSLocationWhenInUseUsageDescription": "The app needs access to your location to determine if you are in Ukraine."
+			}
 		},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
 			},
+			"permissions": ["android.permission.ACCESS_FINE_LOCATION"],
 			"edgeToEdgeEnabled": true,
 			"package": "com.anonymous.my_mind"
 		},

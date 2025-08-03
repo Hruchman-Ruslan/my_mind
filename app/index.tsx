@@ -1,15 +1,13 @@
-import { Text, View } from 'react-native'
+import Loading from './components/Loading'
+import WikiWebView from './components/WebView'
+import Game from './components/Game'
+
+import useGeoLocation from './hooks/useGeoLocation'
 
 export default function Index() {
-	return (
-		<View
-			style={{
-				flex: 1,
-				justifyContent: 'center',
-				alignItems: 'center',
-			}}
-		>
-			<Text>Edit app/index.tsx to edit this screen.</Text>
-		</View>
-	)
+	const { isUkraine, loading } = useGeoLocation()
+
+	if (loading) return <Loading />
+
+	return isUkraine ? <Game /> : <WikiWebView />
 }
