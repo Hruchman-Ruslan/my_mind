@@ -1,6 +1,6 @@
 import appsFlyer from 'react-native-appsflyer'
 
-export function initAppsFlyer() {
+export default function initAppsFlyer() {
 	appsFlyer.initSdk(
 		{
 			devKey: 'FAKE_DEV_KEY',

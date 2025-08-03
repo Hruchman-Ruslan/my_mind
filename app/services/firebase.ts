@@ -1,6 +1,6 @@
 import { initializeApp, getApps } from 'firebase/app'
 
-export function initFirebase() {
+export default function initFirebase() {
 	try {
 		if (getApps().length === 0) {
 			const firebaseApp = initializeApp({
