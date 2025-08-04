@@ -38,6 +38,110 @@ export default function GameLayout() {
 					tabBarStyle: { display: 'none' },
 				}}
 			/>
+			<Tabs.Screen
+				name='zeus'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
+			<Tabs.Screen
+				name='dogs'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
+			<Tabs.Screen
+				name='tiger'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
+			<Tabs.Screen
+				name='candy'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
+			<Tabs.Screen
+				name='space'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
+			<Tabs.Screen
+				name='jelly'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
+			<Tabs.Screen
+				name='magic'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
+			<Tabs.Screen
+				name='robots'
+				options={{
+					header: () => (
+						<CustomHeader
+							left={<MyIcon icon={<Back />} href={'..'} />}
+							center={<LogoText />}
+							right={<MyIcon icon={<InfoIcon />} href='/info' />}
+						/>
+					),
+					tabBarStyle: { display: 'none' },
+				}}
+			/>
 		</Tabs>
 	)
 }
