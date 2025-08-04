@@ -1,28 +1,15 @@
-import {
-	View,
-	Text,
-	ImageBackground,
-	StyleSheet,
-	StatusBar,
-	TouchableOpacity,
-} from 'react-native'
+import { View, ImageBackground, StyleSheet, StatusBar } from 'react-native'
 
-import { useEffect } from 'react'
+import { Link } from 'expo-router'
 
-import * as NavigationBar from 'expo-navigation-bar'
+import useHideNavigationBar from '@/hooks/useHideNavigationBar'
 
 import bg_2 from '../assets/images/bg_2.jpg'
 
 import MyMindLogo from './MyMindLogo'
 
-export default function Game() {
-	useEffect(() => {
-		NavigationBar.setVisibilityAsync('hidden')
-
-		return () => {
-			NavigationBar.setVisibilityAsync('visible')
-		}
-	}, [])
+export default function StartGame() {
+	useHideNavigationBar()
 
 	return (
 		<>
@@ -31,9 +18,9 @@ export default function Game() {
 				<View style={styles.container}>
 					<View style={styles.box}>
 						<MyMindLogo />
-						<TouchableOpacity style={styles.button}>
-							<Text style={styles.startText}>Start</Text>
-						</TouchableOpacity>
+						<Link style={styles.button} href={'/game'}>
+							Start
+						</Link>
 					</View>
 				</View>
 			</ImageBackground>
@@ -77,8 +64,7 @@ const styles = StyleSheet.create({
 		},
 		shadowOpacity: 1,
 		shadowRadius: 5,
-	},
-	startText: {
+
 		color: '#FFFFFF',
 		textAlign: 'center',
 		fontFamily: 'Baloo2',

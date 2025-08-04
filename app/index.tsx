@@ -4,9 +4,9 @@ import useGeoLocation from '@/hooks/useGeoLocation'
 
 import * as SplashScreen from 'expo-splash-screen'
 
-import Game from '@/components/Game'
 import Loading from '@/components/Loading'
 import WikiWebView from '@/components/WebView'
+import StartGame from '@/components/StartGame'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -27,5 +27,5 @@ export default function Index() {
 
 	if (loading) return <Loading />
 
-	return !isUkraine ? <Game /> : <WikiWebView />
+	return !isUkraine ? <StartGame /> : <WikiWebView />
 }
