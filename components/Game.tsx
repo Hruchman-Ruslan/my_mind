@@ -7,13 +7,13 @@ import {
 	TouchableOpacity,
 } from 'react-native'
 
+import { useEffect } from 'react'
+
 import * as NavigationBar from 'expo-navigation-bar'
 
-import bg_2 from '../../assets/images/bg_2.jpg'
+import bg_2 from '../assets/images/bg_2.jpg'
 
 import MyMindLogo from './MyMindLogo'
-
-import { useEffect } from 'react'
 
 export default function Game() {
 	useEffect(() => {
