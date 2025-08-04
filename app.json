@@ -45,6 +45,17 @@
 					"resizeMode": "contain",
 					"backgroundColor": "#ffffff"
 				}
+			],
+			[
+				"expo-font",
+				{
+					"fonts": [
+						"./assets/fonts/Baloo2-Regular.ttf",
+						"./assets/fonts/Baloo2-SemiBold.ttf",
+						"./assets/fonts/Courgette-Regular.ttf",
+						"./assets/fonts/Fredoka-Medium.ttf"
+					]
+				}
 			]
 		],
 		"experiments": {
