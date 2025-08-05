@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native'
+
 import GradientText from './GradientText'
 
 export default function LogoText() {
@@ -16,8 +17,8 @@ export default function LogoText() {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingTop: 42,
-		paddingBottom: 11,
+		// paddingTop: 42,
+		// paddingBottom: 11,
 	},
 	my: {
 		fontFamily: 'Courgette',

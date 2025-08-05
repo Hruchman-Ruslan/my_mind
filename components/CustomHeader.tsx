@@ -1,8 +1,7 @@
+import { ReactNode } from 'react'
 import { SafeAreaView, ImageBackground, StyleSheet } from 'react-native'
 
-import rectangle_3 from '../assets/images/rectangle_3.jpg'
-
-import { ReactNode } from 'react'
+import rectangle_3 from '@/assets/images/bg/rectangle_3.jpg'
 
 interface CustomerHeaderProps {
 	left?: ReactNode
@@ -33,9 +32,10 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		flexDirection: 'row',
-		alignItems: 'baseline',
+		alignItems: 'center',
 		justifyContent: 'space-between',
-		paddingHorizontal: 25,
-		paddingBottom: 10,
+		paddingHorizontal: 30,
+		paddingTop: 50,
+		paddingBottom: 15,
 	},
 })
