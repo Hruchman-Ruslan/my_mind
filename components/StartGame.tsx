@@ -4,7 +4,7 @@ import { Link } from 'expo-router'
 
 import useHideNavigationBar from '@/hooks/useHideNavigationBar'
 
-import bg_2 from '../assets/images/bg_2.jpg'
+import bg_2 from '@/assets/images/bg/bg_2.jpg'
 
 import MyMindLogo from './MyMindLogo'
 

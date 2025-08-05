@@ -6,7 +6,6 @@ import {
 	ImageStyle,
 } from 'react-native'
 import { LinkProps, useRouter } from 'expo-router'
-import React from 'react'
 
 type IconButtonProps = {
 	source: ImageSourcePropType

@@ -1,6 +1,6 @@
-import { Stack } from 'expo-router'
-
 import { useEffect } from 'react'
+
+import { Stack } from 'expo-router'
 
 import initAppsFlyer from '../services/appsFlyer'
 import initFirebase from '../services/firebase'

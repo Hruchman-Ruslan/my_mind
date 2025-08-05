@@ -1,6 +1,7 @@
 import { Text, StyleProp, TextStyle } from 'react-native'
-import MaskedView from '@react-native-masked-view/masked-view'
 import { LinearGradient } from 'expo-linear-gradient'
+
+import MaskedView from '@react-native-masked-view/masked-view'
 
 type GradientTextProps = {
 	text: string
