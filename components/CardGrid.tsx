@@ -1,7 +1,8 @@
-import React from 'react'
 import { View, StyleSheet, StyleProp, ViewStyle } from 'react-native'
-import CardItem from './CardItem'
+
 import { CardStatus } from '@/types/card'
+
+import CardItem from './CardItem'
 
 interface Card {
 	uid: string

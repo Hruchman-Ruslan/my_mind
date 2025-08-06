@@ -6,9 +6,14 @@ import {
 	Image,
 	ImageSourcePropType,
 	View,
+	Animated,
 } from 'react-native'
-import image_default from '@/assets/images/game/image_default.png'
+
 import { CardStatus } from '@/types/card'
+
+import { useFlipAnimation } from '@/hooks/useFlipAnimation'
+
+import image_default from '@/assets/images/game/image_default.png'
 
 interface CardItemProps {
 	style?: StyleProp<ViewStyle>
@@ -25,17 +30,33 @@ export default function CardItem({
 	size = 150,
 	onPress,
 }: CardItemProps) {
-	const source = status === 'closed' ? image_default : image
+	const { frontStyle, backStyle } = useFlipAnimation(status)
+
 	const sizeStyle = { width: size, height: size }
+
+	const wrapperStyles = [
+		styles.card,
+		sizeStyle,
+		status !== 'closed' ? styles.activeCard : null,
+		style,
+	]
 
 	return (
 		<TouchableOpacity
-			style={[styles.card, sizeStyle, style]}
+			style={wrapperStyles}
 			onPress={onPress}
-			activeOpacity={0.8}
+			disabled={status === 'finished'}
 		>
-			<View style={[styles.wrapper, sizeStyle]}>
-				<Image source={source} style={styles.image} />
+			<View style={{ width: size, height: size, position: 'relative' }}>
+				<Animated.View style={[styles.flipCard, frontStyle]}>
+					<Image source={image_default} style={styles.image} />
+				</Animated.View>
+
+				<Animated.View style={[styles.flipCard, backStyle]}>
+					<View style={styles.openedImageWrapper}>
+						<Image source={image} style={styles.image} />
+					</View>
+				</Animated.View>
 			</View>
 		</TouchableOpacity>
 	)
@@ -49,17 +70,29 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
-	wrapper: {
+	activeCard: {
 		borderRadius: 10,
 		borderWidth: 4,
 		borderColor: '#6EBCF7',
 		backgroundColor: '#2E2B42',
+	},
+	flipCard: {
+		backfaceVisibility: 'hidden',
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		width: '100%',
+		height: '100%',
+		borderRadius: 10,
 		overflow: 'hidden',
-
-		justifyContent: 'center',
-		alignItems: 'center',
+	},
+	openedImageWrapper: {
+		flex: 1,
+		padding: 20,
 	},
 	image: {
 		resizeMode: 'contain',
+		width: '100%',
+		height: '100%',
 	},
 })
