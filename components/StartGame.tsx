@@ -1,4 +1,10 @@
-import { View, ImageBackground, StyleSheet, StatusBar } from 'react-native'
+import {
+	View,
+	ImageBackground,
+	StyleSheet,
+	StatusBar,
+	Image,
+} from 'react-native'
 
 import { Link } from 'expo-router'
 
@@ -6,7 +12,7 @@ import useHideNavigationBar from '@/hooks/useHideNavigationBar'
 
 import bg_2 from '@/assets/images/bg/bg_2.jpg'
 
-import MyMindLogo from './MyMindLogo'
+import logo from '@/assets/images/logo/logo.png'
 
 export default function StartGame() {
 	useHideNavigationBar()
@@ -17,7 +23,7 @@ export default function StartGame() {
 			<ImageBackground source={bg_2} style={{ flex: 1 }} resizeMode='cover'>
 				<View style={styles.container}>
 					<View style={styles.box}>
-						<MyMindLogo />
+						<Image source={logo} alt='logo' />
 						<Link style={styles.button} href={'/game'}>
 							Start
 						</Link>
@@ -30,13 +36,8 @@ export default function StartGame() {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
 		paddingTop: 257,
-		paddingRight: 72,
 		paddingBottom: 90,
-		paddingLeft: 73,
 	},
 	box: {
 		height: '100%',
@@ -67,10 +68,9 @@ const styles = StyleSheet.create({
 
 		color: '#FFFFFF',
 		textAlign: 'center',
-		fontFamily: 'Baloo2',
+		fontFamily: 'Ballo2',
 		fontSize: 24,
-		fontStyle: 'normal',
-		fontWeight: '400',
+
 		letterSpacing: 1,
 		textTransform: 'uppercase',
 	},

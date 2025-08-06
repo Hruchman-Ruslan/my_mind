@@ -27,15 +27,13 @@ export default function CustomHeader({
 
 const styles = StyleSheet.create({
 	bg: {
-		height: 102,
+		paddingTop: 50,
+		paddingBottom: 15,
 	},
 	container: {
-		flex: 1,
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		paddingHorizontal: 30,
-		paddingTop: 50,
-		paddingBottom: 15,
+		paddingHorizontal: 25,
 	},
 })

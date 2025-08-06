@@ -1,9 +1,14 @@
-import { Image } from 'react-native'
+import { Image, StyleSheet } from 'react-native'
 
 import HeartImage from '@/assets/images/svg/heart.png'
 
 export default function Heart() {
-	return (
-		<Image source={HeartImage} alt='heart' style={{ width: 30, height: 30 }} />
-	)
+	return <Image source={HeartImage} alt='heart' style={styles.mini_logo} />
 }
+
+const styles = StyleSheet.create({
+	mini_logo: {
+		width: 32,
+		height: 30,
+	},
+})
