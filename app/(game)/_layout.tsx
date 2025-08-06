@@ -1,18 +1,19 @@
-import { Tabs } from 'expo-router'
 import { View } from 'react-native'
+import { Tabs } from 'expo-router'
 
 import CustomHeader from '@/components/CustomHeader'
-import LogoText from '@/components/LogoText'
 import MyIcon from '@/components/MyIcon'
 
-import InfoIcon from '@/assets/images/svg/info.svg'
-import Back from '@/assets/images/svg/back.svg'
-import Heart from '@/components/Heart'
 import PageIndicator from '@/components/PageIndicator'
+import Heart from '@/components/Heart'
+import Logo from '@/components/Logo'
 
 import useCurrentPage from '@/hooks/useCurrentPage'
 
 import { contentRoutes } from '@/constants/contentRoutes'
+
+import InfoIcon from '@/assets/images/svg/info.svg'
+import Back from '@/assets/images/svg/back.svg'
 
 export default function GameLayout() {
 	const currentPage = useCurrentPage()
@@ -24,8 +25,8 @@ export default function GameLayout() {
 				options={{
 					header: () => (
 						<CustomHeader
-							left={<View />}
-							center={<LogoText />}
+							left={<View style={{ width: 30 }} />}
+							center={<Logo />}
 							right={<MyIcon icon={<InfoIcon />} href='/info' />}
 						/>
 					),
@@ -39,8 +40,8 @@ export default function GameLayout() {
 					header: () => (
 						<CustomHeader
 							left={<MyIcon icon={<Back />} href='..' />}
-							center={<LogoText />}
-							right={<View />}
+							center={<Logo />}
+							right={<View style={{ width: 30 }} />}
 						/>
 					),
 					tabBarStyle: { display: 'none' },

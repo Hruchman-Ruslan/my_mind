@@ -43,7 +43,14 @@ export default function Modal({ result, style }: ModalProps) {
 				end={{ x: 1, y: 1 }}
 				style={styles.gradientBox}
 			>
-				<Text style={styles.resultText}>{resultText}</Text>
+				<LinearGradient
+					colors={['#43BCF0', '#541896', '#711280']}
+					start={{ x: 1, y: 0 }}
+					end={{ x: 0.3, y: 1.2 }}
+					style={styles.resultContainer}
+				>
+					<Text style={styles.resultText}>{resultText}</Text>
+				</LinearGradient>
 			</LinearGradient>
 
 			<View style={styles.buttons}>
@@ -63,6 +70,16 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 
+	resultContainer: {
+		display: 'flex',
+		paddingVertical: 28,
+		paddingHorizontal: 21,
+		justifyContent: 'center',
+		alignItems: 'center',
+		gap: 7,
+		borderRadius: 14,
+	},
+
 	gradientBox: {
 		height: 183,
 		width: '100%',
@@ -71,21 +88,21 @@ const styles = StyleSheet.create({
 		borderColor: '#FFF',
 		justifyContent: 'center',
 		alignItems: 'center',
-		paddingHorizontal: 20,
 	},
 
 	resultText: {
 		color: '#FFF',
 		textAlign: 'center',
-		fontFamily: 'Baloo 2',
+		fontFamily: 'Ballo2',
 		fontSize: 27,
 		fontWeight: '400',
 		textTransform: 'uppercase',
 	},
 
 	buttons: {
+		paddingHorizontal: 62,
 		flexDirection: 'row',
-		justifyContent: 'space-around',
+		justifyContent: 'space-between',
 		marginTop: 10,
 		width: '100%',
 	},

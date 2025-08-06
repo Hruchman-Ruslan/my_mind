@@ -1,7 +1,7 @@
 import { Text, StyleSheet } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 
-type PageIndicatorProps = {
+interface PageIndicatorProps {
 	current: number
 	total: number
 }
@@ -21,22 +21,15 @@ export default function PageIndicator({ current, total }: PageIndicatorProps) {
 
 const styles = StyleSheet.create({
 	container: {
-		display: 'flex',
 		width: 48,
 		height: 30,
 		justifyContent: 'center',
 		alignItems: 'center',
-		gap: 10,
 		borderRadius: 71,
 	},
 	text: {
 		color: '#FFF',
-		textAlign: 'center',
-		fontFamily: 'Baloo2',
+		fontFamily: 'Ballo2',
 		fontSize: 18,
-		fontStyle: 'normal',
-		fontWeight: '400',
-		lineHeight: undefined,
-		textTransform: 'uppercase',
 	},
 })
