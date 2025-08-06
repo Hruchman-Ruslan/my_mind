@@ -5,12 +5,21 @@ import { Stack } from 'expo-router'
 import initAppsFlyer from '../services/appsFlyer'
 import initFirebase from '../services/firebase'
 import initOneSignal from '../services/oneSignal'
+import { getData, saveData } from '@/services/storage'
 
 export default function RootLayout() {
 	useEffect(() => {
-		initAppsFlyer()
-		initFirebase()
-		initOneSignal()
+		async function initialize() {
+			initAppsFlyer()
+			initFirebase()
+			initOneSignal()
+
+			await saveData('userFakeToken', '123456789abcdef')
+			const token = await getData('userFakeToken')
+			console.log('User fake token from storage:', token)
+		}
+
+		initialize()
 	}, [])
 
 	return (
