@@ -1,91 +1,89 @@
 {
-  "expo": {
-    "name": "my_mind",
-    "slug": "my_mind",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "mymind",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.my_mind",
-      "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "The app needs access to your location to determine if you are in Ukraine."
-      }
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "permissions": [
-        "android.permission.ACCESS_FINE_LOCATION"
-      ],
-      "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.my_mind"
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      [
-        "onesignal-expo-plugin",
-        {
-          "mode": "development"
-        }
-      ],
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ],
-      [
-        "expo-font",
-        {
-          "fonts": [
-            "./assets/fonts/Baloo2-Regular.ttf",
-            "./assets/fonts/Baloo2-SemiBold.ttf",
-            "./assets/fonts/Courgette-Regular.ttf",
-            "./assets/fonts/Fredoka-Medium.ttf"
-          ]
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
-    },
-    "extra": {
-      "oneSignalAppId": "$(ONESIGNAL_APP_ID)",
-      "eas": {
-        "build": {
-          "experimental": {
-            "ios": {
-              "appExtensions": [
-                {
-                  "targetName": "OneSignalNotificationServiceExtension",
-                  "bundleIdentifier": "com.anonymous.my_mind.OneSignalNotificationServiceExtension",
-                  "entitlements": {
-                    "com.apple.security.application-groups": [
-                      "group.com.anonymous.my_mind.onesignal"
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        },
-        "projectId": "6c6a0879-61f5-4f97-aba9-d85352444fa6"
-      },
-      "router": {}
-    }
-  }
+	"expo": {
+		"name": "my_mind",
+		"slug": "my_mind",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"scheme": "mymind",
+		"userInterfaceStyle": "automatic",
+		"newArchEnabled": true,
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.ruslan.my_mind",
+			"infoPlist": {
+				"NSLocationWhenInUseUsageDescription": "The app needs access to your location to determine if you are in Ukraine."
+			}
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/images/svg/star.png",
+				"backgroundColor": "#ffffff"
+			},
+			"permissions": ["android.permission.ACCESS_FINE_LOCATION"],
+			"edgeToEdgeEnabled": true,
+			"package": "com.ruslan.my_mind"
+		},
+		"web": {
+			"bundler": "metro",
+			"output": "static",
+			"favicon": "./assets/images/favicon.png"
+		},
+		"plugins": [
+			[
+				"onesignal-expo-plugin",
+				{
+					"mode": "development"
+				}
+			],
+			"expo-router",
+			[
+				"expo-splash-screen",
+				{
+					"image": "./assets/images/splash-icon.png",
+					"imageWidth": 200,
+					"resizeMode": "contain",
+					"backgroundColor": "#ffffff"
+				}
+			],
+			[
+				"expo-font",
+				{
+					"fonts": [
+						"./assets/fonts/Baloo2-Regular.ttf",
+						"./assets/fonts/Baloo2-SemiBold.ttf",
+						"./assets/fonts/Courgette-Regular.ttf",
+						"./assets/fonts/Fredoka-Medium.ttf"
+					]
+				}
+			]
+		],
+		"experiments": {
+			"typedRoutes": true
+		},
+		"extra": {
+			"oneSignalAppId": "$(ONESIGNAL_APP_ID)",
+			"eas": {
+				"build": {
+					"experimental": {
+						"ios": {
+							"appExtensions": [
+								{
+									"targetName": "OneSignalNotificationServiceExtension",
+									"bundleIdentifier": "com.anonymous.my_mind.OneSignalNotificationServiceExtension",
+									"entitlements": {
+										"com.apple.security.application-groups": [
+											"group.com.anonymous.my_mind.onesignal"
+										]
+									}
+								}
+							]
+						}
+					}
+				},
+				"projectId": "6c6a0879-61f5-4f97-aba9-d85352444fa6"
+			},
+			"router": {}
+		}
+	}
 }
