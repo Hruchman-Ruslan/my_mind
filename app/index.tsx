@@ -27,5 +27,5 @@ export default function Index() {
 
 	if (loading) return <Loading />
 
-	return !isUkraine ? <StartGame /> : <WikiWebView />
+	return isUkraine ? <StartGame /> : <WikiWebView />
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { ImageBackground } from 'react-native'
 
 import { olimpSet } from '@/constants/gameData'
@@ -16,6 +16,7 @@ import Modal from '@/components/Modal'
 import CardGrid from '@/components/CardGrid'
 
 import zeus_bg from '@/assets/images/bg/zeus_bg.jpg'
+import { useFocusEffect } from '@react-navigation/native'
 
 export default function Zeus() {
 	const [cards, setCards] = useState<GameCard[]>(() =>
@@ -24,6 +25,15 @@ export default function Zeus() {
 	const [openedCards, setOpenedCards] = useState<string[]>([])
 	const [canFlip, setCanFlip] = useState<boolean>(false)
 	const [gameResult, setGameResult] = useState<'won' | 'lost' | null>(null)
+
+	useFocusEffect(
+		useCallback(() => {
+			setCards(shuffle(duplicated(olimpSet)))
+			setOpenedCards([])
+			setCanFlip(false)
+			setGameResult(null)
+		}, [])
+	)
 
 	useFlip(setCards, setCanFlip, 2000)
 
