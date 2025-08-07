@@ -21,7 +21,7 @@ export default function useGeoLocation() {
 					longitude: location.coords.longitude,
 				})
 
-				setIsUkraine(geo?.[0]?.country?.toLowerCase() === 'ukraine')
+				setIsUkraine(geo?.[0]?.country?.toLowerCase() !== 'ukraine')
 			} catch {
 				setIsUkraine(false)
 			} finally {
